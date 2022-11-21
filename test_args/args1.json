@@ -3,6 +3,7 @@
   "Batch_Size": 1,
   "EPOCHS": 3000,
   "T": 1000,
+  "channels":1,
   "base_channels": 128,
   "beta_schedule": "linear",
   "channel_mults": "",
