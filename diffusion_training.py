@@ -3,6 +3,7 @@ import copy
 import sys
 import time
 from random import seed
+import os
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -16,6 +17,7 @@ from helpers import *
 from UNet import UNetModel, update_ema_params
 
 torch.cuda.empty_cache()
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 ROOT_DIR = "./"
 
