@@ -49,7 +49,7 @@ def train(training_dataset_loader, testing_dataset_loader, args, resume):
             args['img_size'], betas, loss_weight=args['loss_weight'],
             loss_type=args['loss-type'], noise=args["noise_fn"], img_channels=in_channels
             )
-
+    
     if resume:
 
         if "unet" in resume:
@@ -69,7 +69,7 @@ def train(training_dataset_loader, testing_dataset_loader, args, resume):
         start_epoch = 0
         ema = copy.deepcopy(model)
 
-    tqdm_epoch = range(start_epoch, args['EPOCHS'] + 1)
+    tqdm_epoch = range(start_epoch, args['EPOCHS'])
     model.to(device)
     ema.to(device)
     optimiser = optim.AdamW(model.parameters(), lr=args['lr'], weight_decay=args['weight_decay'], betas=(0.9, 0.999))

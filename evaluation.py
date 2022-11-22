@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib import animation
 import torch
 from skimage.metrics import structural_similarity as ssim
 from sklearn.metrics import auc, roc_curve
@@ -112,6 +113,8 @@ def testing(testing_dataset_loader, diffusion, args, ema, model):
         pass
     ema.eval()
     model.eval()
+
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     plt.rcParams['figure.dpi'] = 200
     for i in [*range(100, args['sample_distance'], 100)]:

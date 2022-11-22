@@ -9,7 +9,6 @@ from matplotlib import animation
 from torch.utils.data import Dataset
 from torchvision import datasets, transforms
 
-
 # helper function to make getting another batch of data easier
 
 
@@ -483,7 +482,7 @@ class DAGM(Dataset):
 
         return sample
 
-
+#TODO modify it for more types of MVTEC dataset
 class MVTec(Dataset):
     def __init__(self, dir, anomalous=False, img_size=(256, 256), rgb=True, random_crop=True, include_good=False):
         # dir = './DATASETS/leather'
