@@ -3,6 +3,7 @@ from matplotlib import animation
 import torch
 from skimage.metrics import structural_similarity as ssim
 from sklearn.metrics import auc, roc_curve
+import numpy as np
 
 from helpers import gridify_output
 
