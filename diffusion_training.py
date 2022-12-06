@@ -17,7 +17,7 @@ from helpers import *
 from UNet import UNetModel, update_ema_params
 
 torch.cuda.empty_cache()
-os.environ["CUDA_VISIBLE_DEVICES"] = '1'
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 ROOT_DIR = "./"
 

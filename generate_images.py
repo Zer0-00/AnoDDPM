@@ -1069,6 +1069,7 @@ if __name__ == '__main__':
     import os
     import sys
 
+    os.environ["CUDA_VISIBLE_DEVICES"] = '0'
     os.environ['KMP_DUPLICATE_LIB_OK'] = 'True'
 
     # add times new roman to mpl fonts
